@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a Guard or plugin problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: Share only redacted excerpts. Keep full journals, accounts, credentials and device identifiers private.
+  - type: input
+    id: versions
+    attributes:
+      label: Guard, Windows and affected client or plugin versions
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and sanitized evidence
+      description: Include the relevant run.log events and Windows power event IDs if applicable.
+    validations:
+      required: true

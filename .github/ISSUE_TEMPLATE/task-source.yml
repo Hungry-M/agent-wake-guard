@@ -1,0 +1,38 @@
+name: Task source request
+description: Propose a desktop, CLI or browser task adapter.
+title: "[Task source]: "
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic or redacted examples. Remove usernames, prompts, cookies, tokens, machine identifiers and private paths.
+  - type: input
+    id: client
+    attributes:
+      label: Client and exact version
+      placeholder: Harness name and version
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Client type
+      options:
+        - Windows desktop
+        - CLI
+        - Browser
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: state
+    attributes:
+      label: Where can an adapter read task state?
+      description: Link to public API documentation or give a synthetic example that shows start, finish and approval or error.
+    validations:
+      required: true
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contribution
+      options:
+        - label: I can test an adapter or submit a PR.
